@@ -1,0 +1,95 @@
+# ==========================================
+# CivicPulse — Root .gitignore
+# ==========================================
+
+# ── Dependencies ───────────────────────────
+node_modules/
+backend/node_modules/
+.pnp
+.pnp.js
+
+# ── Production Builds ──────────────────────
+dist/
+dist-ssr/
+build/
+backend/dist/
+*.local
+
+# ── Vite & Cache ───────────────────────────
+.vite/
+.cache/
+.parcel-cache/
+.eslintcache
+
+# ── Environment & Secrets ──────────────────
+# Do not commit API keys, DB passwords, Twilio tokens
+.env
+.env*.local
+backend/.env
+ai-service/.env
+*.pem
+
+# ── User Media Uploads ─────────────────────
+# Keep uploads directory structure, but ignore uploaded files
+backend/uploads/*
+!backend/uploads/.gitkeep
+
+# ── Python / AI Microservice ───────────────
+__pycache__/
+*/__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Pickled ML models (trained on fly by ai-service/main.py)
+ai-service/models/*.joblib
+ai-service/models/*.pkl
+ai-service/models/*.pickle
+
+# ── Logs & Debugging ───────────────────────
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# ── IDEs & Editors ─────────────────────────
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# ── Operating System Files ─────────────────
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+[Dd]esktop.ini
